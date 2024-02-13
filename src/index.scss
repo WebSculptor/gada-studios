@@ -1,0 +1,341 @@
+@font-face {
+  font-family: "Nekst";
+  src: url("./assets/fonts/Nekst-Black.woff2") format("woff2"),
+    url("./assets/fonts/Nekst-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nekst";
+  src: url("./assets/fonts/Nekst-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Nekst-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nekst";
+  src: url("./assets/fonts/Nekst-Light.woff2") format("woff2"),
+    url("./assets/fonts/Nekst-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nekst";
+  src: url("./assets/fonts/Nekst-SemiBold.woff2") format("woff2"),
+    url("./assets/fonts/Nekst-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nekst";
+  src: url("./assets/fonts/Nekst-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Nekst-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nekst";
+  src: url("./assets/fonts/Nekst-Medium.woff2") format("woff2"),
+    url("./assets/fonts/Nekst-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nekst";
+  src: url("./assets/fonts/Nekst-Thin.woff2") format("woff2"),
+    url("./assets/fonts/Nekst-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --white: #ffffff;
+  --white-alt: #f5f5f5;
+  // --white: #f5f5f5;
+  // --white-alt: #e8e8e8;
+  --black: #191919;
+  --black-alt: #353535;
+  --orange: #b88745;
+  --orange-alt: #fcf5a5;
+  --blur: #191919a3;
+  --border: 1px solid #cecece;
+
+  // Fonts
+  --thin: "Nekst", sans-serif;
+  --light: "Nekst", sans-serif;
+  --regular: "Nekst", sans-serif;
+  --medium: "Nekst", sans-serif;
+  --bold: "Nekst", sans-serif;
+  --sBold: "Nekst", sans-serif;
+  --strong: "Nekst", sans-serif;
+
+  --pointer: pointer;
+  --not-allowed: not-allowed;
+
+  --nh: 10.4rem;
+  --mx: 109rem;
+  --xl: 12.8rem;
+  --lg: clamp(5rem, 15vw, 12.8rem);
+  --ls: clamp(4.4rem, 12vw, 12.8rem);
+  --cw: 64rem;
+
+  @media screen and (max-width: 1024px) {
+    --pointer: default;
+    --not-allowed: default;
+  }
+
+  @media screen and (max-width: 768px) {
+    --xl: 6.4rem;
+    --cw: 100%;
+  }
+
+  @media screen and (max-width: 435px) {
+    --nh: 7rem;
+    --xl: 4rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: unset;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+
+  &::selection {
+    background-color: var(--orange);
+    color: var(--white);
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  background-color: var(--white);
+
+  @media screen and (min-width: 2024px) {
+    font-size: initial;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 60%;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 55%;
+  }
+
+  @media screen and (max-width: 425px) {
+    font-size: 55%;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 50%;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 45%;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--white);
+    font-family: var(--regular);
+    font-weight: normal;
+
+    .relative {
+      position: relative;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .fixed {
+      position: fixed;
+    }
+
+    .sticky {
+      position: sticky;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .col {
+      flex-direction: column;
+    }
+
+    .row {
+      flex-direction: row;
+    }
+
+    .justify {
+      text-align: justify;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .items-end {
+      align-items: flex-end;
+    }
+
+    .items-start {
+      align-items: flex-start;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .justify-around {
+      justify-content: space-around;
+    }
+
+    .justify-evenly {
+      justify-content: space-evenly;
+    }
+
+    .justify-end {
+      justify-content: flex-end;
+    }
+
+    .justify-start {
+      justify-content: flex-start;
+    }
+
+    .lazy-load-image-background,
+    img {
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    main {
+      padding: var(--nh) 0 0;
+    }
+
+    .large__title {
+      font-family: var(--strong);
+      font-weight: 900;
+      font-size: var(--ls);
+      color: var(--black-alt);
+      white-space: nowrap;
+      margin-bottom: 2.4rem;
+      letter-spacing: -0.02em;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 0;
+      }
+
+      span {
+        font-family: inherit;
+        color: var(--orange);
+        letter-spacing: inherit;
+      }
+    }
+
+    .small__title {
+      font-size: 4rem;
+      color: var(--black-alt);
+      font-family: var(--sBold);
+      font-weight: 600;
+
+      @media screen and (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+
+    h3 {
+      color: var(--orange);
+      font-family: var(--sBold);
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 1.7rem;
+    }
+
+    .small__text {
+      color: var(--black-alt);
+      font-size: clamp(1.6rem, 7vw, 1.8rem);
+      font-family: var(--light);
+      font-weight: 300;
+      line-height: 2.4rem;
+    }
+
+    .extra {
+      width: 100%;
+      padding: 6.4rem 0 0;
+
+      @media screen and (max-width: 768px) {
+        padding-top: 3rem;
+      }
+    }
+
+    .other__content {
+      display: flex;
+      justify-content: space-between;
+      gap: 2.4rem;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: var(--mx);
+      padding: inherit 0;
+      margin: 0 auto;
+
+      .min__width {
+        max-width: var(--cw);
+        width: 100%;
+      }
+    }
+
+    button,
+    a {
+      user-select: none;
+      cursor: var(--pointer);
+    }
+
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+  }
+}

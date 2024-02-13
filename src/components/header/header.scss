@@ -1,0 +1,149 @@
+header {
+  top: 0;
+  width: 100%;
+  height: var(--nh);
+  padding: 0 1.5rem;
+  background-color: var(--white);
+  z-index: 20;
+
+  section {
+    width: 100%;
+    height: 100%;
+    border-bottom: var(--border);
+    background-color: var(--white);
+    max-width: var(--mx);
+    margin: 0 auto;
+  }
+
+  .desktop_nav {
+    display: flex;
+
+    nav {
+      gap: 3.5rem;
+
+      .link {
+        padding: 0.2rem 0.5rem;
+        cursor: var(--pointer);
+        transition: color 0.2s;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 70%;
+          height: 0;
+          background-color: var(--orange);
+          z-index: -1;
+          transition: width 0.2s, height 0.2s;
+        }
+
+        &:hover {
+          color: var(--white) !important;
+
+          &::before {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .active_link {
+        &::before {
+          width: 75%;
+          height: 3px;
+        }
+      }
+    }
+  }
+
+  .mobile_nav {
+    display: none;
+
+    .mobile_menu {
+      top: -100vh;
+      left: 0;
+      background-color: var(--white);
+      overflow-y: auto;
+      height: 100vh;
+      width: 100%;
+      padding: 16.8rem 2rem 2rem;
+      border-bottom: var(--border);
+      z-index: -1;
+      transition: top 0.3s ease-in-out;
+
+      .mobile_menu-links {
+        .menu_link {
+          font-size: 5rem;
+          font-family: var(--bold);
+          font-weight: bold;
+          color: var(--black-alt);
+          cursor: var(--pointer);
+        }
+
+        .menu_link-active {
+          color: var(--orange);
+        }
+      }
+
+      .menu_divider {
+        width: 16.3rem;
+        height: 0;
+        margin: 6.4rem 0 4rem;
+        border: var(--border);
+      }
+
+      .selected_projects {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        h1 {
+          font-size: 1.9rem;
+          font-family: var(--bold);
+          font-weight: bold;
+          color: var(--orange);
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+
+          .project_link {
+            font-size: 1.6rem;
+            font-family: var(--medium);
+            font-weight: 500;
+            color: var(--black-alt);
+            cursor: var(--pointer);
+            line-height: 21px;
+          }
+        }
+      }
+    }
+
+    .mobile_menu-active {
+      top: 0;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .mobile_nav {
+      display: flex;
+    }
+
+    .desktop_nav {
+      display: none;
+    }
+  }
+
+  .logo {
+    height: 3.2rem;
+
+    @media screen and (max-width: 768px) {
+      width: 11rem;
+    }
+  }
+}

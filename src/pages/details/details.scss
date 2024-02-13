@@ -1,0 +1,98 @@
+.details {
+  width: 100%;
+
+  .details__banner {
+    width: 100%;
+    height: 63.8rem;
+
+    img {
+      object-fit: cover;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 50rem;
+    }
+
+    @media screen and (max-width: 440px) {
+      height: 32rem;
+    }
+  }
+
+  .complete__details {
+    max-width: 131.2rem;
+    width: 100%;
+    padding: 0 1.5rem;
+    margin: var(--nh) auto 0;
+  }
+
+  .image_selection {
+    margin-top: var(--nh);
+    margin-inline: auto;
+    max-width: 144rem;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 1.5rem;
+
+    img {
+      aspect-ratio: 1.3;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+  }
+
+  .macbook {
+    margin-top: 0;
+
+    img {
+      aspect-ratio: 0;
+      object-fit: contain;
+    }
+  }
+
+  .vehicle {
+    flex-wrap: wrap;
+    margin-inline: auto;
+    max-width: 144rem;
+    width: 100%;
+    gap: 1.5rem;
+    margin-bottom: -8rem;
+
+    div {
+      aspect-ratio: 2;
+      flex: 1 1 70rem;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  .extra_images {
+    gap: 1.5rem;
+    margin-top: var(--nh);
+    margin-inline: auto;
+    max-width: 144rem;
+    width: 100%;
+    flex-wrap: wrap;
+
+    div {
+      aspect-ratio: 2;
+
+      &:nth-child(1),
+      &:nth-child(4) {
+        flex: 1 1 40rem;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        flex: 1 1 58rem;
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}

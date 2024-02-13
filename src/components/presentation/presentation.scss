@@ -1,0 +1,42 @@
+.presentation__container {
+  .presentation {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-alt);
+
+    .pres__top {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .pres__mid {
+      width: 100%;
+      margin: 1rem 0;
+    }
+
+    .pres__bot {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      img {
+        flex: 1 1 25rem;
+      }
+    }
+
+    @media screen and (max-width: 425px) {
+      .pres__top,
+      .pres__mid {
+        img {
+          height: 25rem !important;
+        }
+      }
+
+      .pres__top {
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

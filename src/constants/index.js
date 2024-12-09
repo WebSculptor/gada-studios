@@ -2,9 +2,6 @@ import {
   // * TEAMS
   umar,
   daniel,
-  mayowa,
-  emma,
-  hakeem,
   ibro,
   wilson,
   // * PROJECTS
@@ -153,11 +150,6 @@ export const team = [
     image: umar,
   },
   {
-    name: "Emmanuel Egbubine",
-    role: "Co-Founder, Brand & Marketing",
-    image: emma,
-  },
-  {
     name: "Wilson Aku",
     role: "Co-Founder, Business Development & Operations",
     image: wilson,
@@ -168,19 +160,9 @@ export const team = [
     image: daniel,
   },
   {
-    name: "Abdulhakeem Abdulhaziz",
-    role: "Partner, Engineering (Front-end)",
-    image: hakeem,
-  },
-  {
     name: "Salihu Ibrahim",
     role: "Partner, Design",
     image: ibro,
-  },
-  {
-    name: "Mayowa Ajilore",
-    role: "Partner, Cyber Security",
-    image: mayowa,
   },
 ];
 

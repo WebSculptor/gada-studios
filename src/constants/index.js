@@ -3,7 +3,6 @@ import {
   umar,
   daniel,
   ibro,
-  wilson,
   // * PROJECTS
   kadcity,
   kadcityBanner,
@@ -148,11 +147,6 @@ export const team = [
     name: "Salihu I. Umar",
     role: "Founder, Creative Director",
     image: umar,
-  },
-  {
-    name: "Wilson Aku",
-    role: "Co-Founder, Business Development & Operations",
-    image: wilson,
   },
   {
     name: "Daniel Yohanna",
